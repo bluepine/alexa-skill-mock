@@ -1,0 +1,24 @@
+{
+  "session": {
+    "sessionId": "SessionId.a3ada4cb-c732-4246-956a-7184b0e5049b",
+    "application": {
+      "applicationId": "amzn1.echo-sdk-ams.app.eabae4b2-c937-437a-8947-638986b3bab1"
+    },
+    "attributes": null,
+    "user": {
+      "userId": "amzn1.account.AFKSFC7GBHXUD2WH72PGFPTGXLFA",
+      "accessToken": null
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.f254fa53-a967-41ae-a97b-70b4646997d3",
+    "timestamp": 1443839339659,
+    "intent": {
+      "name": "HelpIntent",
+      "slots": {}
+    },
+    "reason": null
+  }
+}

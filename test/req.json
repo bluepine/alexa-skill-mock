@@ -1,0 +1,10 @@
+"request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.f254fa53-a967-41ae-a97b-70b4646997d3",
+    "timestamp": 1443839339659,
+    "intent": {
+	"name": "HelpIntent",
+	"slots": {}
+    },
+    "reason": null
+}

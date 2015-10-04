@@ -1,1 +1,1 @@
-curl -X POST -d $1 http://localhost:3000/alexa
+curl -H "Content-Type: application/json" -X POST --data @$1 http://localhost:3000/sample

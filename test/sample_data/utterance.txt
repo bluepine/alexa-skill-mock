@@ -1,0 +1,5 @@
+#This is a comment
+#This file is optional
+MyColorIsIntent My color is {Color}
+WhatsMyColorIntent What is my color
+HelpIntent help

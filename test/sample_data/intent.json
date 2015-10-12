@@ -1,8 +1,13 @@
 {
-  "responses": [
+  "intents": [
     {
       "intent": "MyColorIsIntent",
-      "response": ""
+      "slots": [
+        {
+          "name": "Color",
+          "type": "LIST_OF_COLORS"
+        }
+      ]
     },
     {
       "intent": "WhatsMyColorIntent",

@@ -33,9 +33,14 @@ var bodyParser = require('body-parser');
 var request = require('sync-request');
 
 function getText(url) {
-	var resp = request('GET', url);
-	var text = resp.getBody('utf8')
-	return text
+	if (url) {
+		var resp = request('GET', url);
+		var text = resp.getBody('utf8')
+		return text
+	}
+	else {
+		return null;
+	}
 }
 
 var urls = [
@@ -44,6 +49,13 @@ var urls = [
 	'https://demo-project-swei-turner.c9.io/node.js/alexa-skill-mock/test/sample_data/utterance.txt',
 	'https://demo-project-swei-turner.c9.io/node.js/alexa-skill-mock/test/sample_data/response.txt'
 ]
+
+// var urls = [
+// 	'https://demo-project-swei-turner.c9.io/node.js/alexa-skill-mock/test/sample_data/intent.json',
+// 	'https://demo-project-swei-turner.c9.io/node.js/alexa-skill-mock/test/sample_data/slot.json',
+// 	null,
+// 	'https://demo-project-swei-turner.c9.io/node.js/alexa-skill-mock/test/sample_data/response.txt'
+// ]
 
 // Add the route
 server.route({

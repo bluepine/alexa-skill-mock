@@ -1,0 +1,4 @@
+#This is a comment
+MyColorIsIntent I see your color is whatever color you just said.
+WhatsMyColorIntent Your color is something that I should have remembered were I am not a mock.
+HelpIntent First tell me what your color is. Then ask me what your color is.

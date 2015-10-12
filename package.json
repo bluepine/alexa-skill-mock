@@ -1,0 +1,35 @@
+{
+  "name": "alexa-skill-mock",
+  "version": "0.0.1",
+  "description": "A mocking framework for Alexa skills",
+  "main": "hapi.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "alexa-app": "^2.1.4",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "hapi": "^10.3.0",
+    "sync-request": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bluepine/alexa-skill-mock.git"
+  },
+  "keywords": [
+    "mock",
+    "alexa"
+  ],
+  "author": "Song Wei <1983.song.wei@gmail.com>",
+  "license": "APACHE 2",
+  "bugs": {
+    "url": "https://github.com/bluepine/alexa-skill-mock/issues"
+  },
+  "homepage": "https://github.com/bluepine/alexa-skill-mock"
+}

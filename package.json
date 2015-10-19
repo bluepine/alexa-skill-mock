@@ -1,17 +1,13 @@
 {
   "name": "alexa-skill-mock",
-  "version": "0.0.1",
+  "version": "1.0.0.1",
   "description": "A mocking framework for Alexa skills",
-  "main": "hapi.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
     "alexa-app": "^2.1.4",
-    "body-parser": "^1.14.1",
-    "ejs": "^2.3.4",
-    "express": "^4.13.3",
-    "hapi": "^10.3.0",
     "lodash": "^3.10.1",
     "q": "^1.4.1",
     "sync-request": "^2.0.1"

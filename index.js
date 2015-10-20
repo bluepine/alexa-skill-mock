@@ -75,23 +75,24 @@ var urls = [
 // Add the route
 
 
-var request = require('sync-request');
+var request = require('request');
 
-//TODO: avoid using sync requests.
-function getText(url) {
-    if (url) {
-        var resp = request('GET', url);
-        var text = resp.getBody('utf8')
-        return text
-    }
-    else {
-        return null;
-    }
+var httpGet = function(url) {
+    var deferred = Q.defer();
+    request(url, function(error, response, body) {
+        if (!error && response.statusCode == 200) {
+            deferred.resolve(body)
+        }
+        else {
+            deferred.resolve(null)
+        }
+    })
+    return deferred.promise;
 }
 
 var e = function alexa_mock(urls, alexa_app_name, callback) {
     var app = new alexa.app(alexa_app_name);
-    var operations = _.map(urls, getText);
+    var operations = _.map(urls, httpGet)
     Q.all(operations).then(function(texts) {
         var intent = JSON.parse(texts[0])
         var slot = JSON.parse(texts[1])

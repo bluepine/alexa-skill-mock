@@ -2,10 +2,10 @@
 
 var port_num = 3000
 var urls = [
-	'https://demo-project-swei-turner.c9.io/node.js/alexa-skill-mock/example/sample_data/intent.json',
-	'https://demo-project-swei-turner.c9.io/node.js/alexa-skill-mock/example/sample_data/slot.json',
-	'https://demo-project-swei-turner.c9.io/node.js/alexa-skill-mock/example/sample_data/utterance.txt',
-	'https://demo-project-swei-turner.c9.io/node.js/alexa-skill-mock/example/sample_data/response.txt'
+	'https://nodejs-test-swei-turner.c9.io/alexa_mock_data/intent.json',
+	'https://nodejs-test-swei-turner.c9.io/alexa_mock_data/slot.json',
+	'https://nodejs-test-swei-turner.c9.io/alexa_mock_data/utterance.txt',
+	'https://nodejs-test-swei-turner.c9.io/alexa_mock_data/response.txt'
 ]
 
 //////////////////////config ends

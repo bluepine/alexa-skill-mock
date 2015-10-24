@@ -58,23 +58,6 @@ function text_to_obj(responses) {
     }, {})
 }
 
-var urls = [
-    'https://demo-project-swei-turner.c9.io/node.js/alexa-skill-mock/test/sample_data/intent.json',
-    'https://demo-project-swei-turner.c9.io/node.js/alexa-skill-mock/test/sample_data/slot.json',
-    'https://demo-project-swei-turner.c9.io/node.js/alexa-skill-mock/test/sample_data/utterance.txt',
-    'https://demo-project-swei-turner.c9.io/node.js/alexa-skill-mock/test/sample_data/response.txt'
-]
-
-// var urls = [
-// 	'https://demo-project-swei-turner.c9.io/node.js/alexa-skill-mock/test/sample_data/intent.json',
-// 	'https://demo-project-swei-turner.c9.io/node.js/alexa-skill-mock/test/sample_data/slot.json',
-// 	null,
-// 	'https://demo-project-swei-turner.c9.io/node.js/alexa-skill-mock/test/sample_data/response.txt'
-// ]
-
-// Add the route
-
-
 var request = require('request');
 
 var httpGet = function(url) {
@@ -96,13 +79,19 @@ var e = function alexa_mock(urls, alexa_app_name, callback) {
     Q.all(operations).then(function(texts) {
         var intent = JSON.parse(texts[0])
         var slot = JSON.parse(texts[1])
-        var utterances = texts[2]
+        // var utterances = texts[2]
         var responses = texts[3]
-        var intent_json = build_intent_json(intent, utterances);
+        var intent_json = build_intent_json(intent, null);
         var response_json = text_to_obj(responses)
         _.each(intent_json, function(value, intent) {
             app.intent(intent, value, function(request, response) {
                 response.say(response_json[intent])
+                var card_response = "slot values: "
+                var slots = intent_json[intent].slots
+                for (var key in slots) {
+                    card_response = card_response + " slot: "+ key + " value: "+ request.slot(key)
+				}
+				response.card('Slot values', card_response)
             })
         })
         callback(app)

@@ -89,9 +89,9 @@ var e = function alexa_mock(urls, alexa_app_name, callback) {
                 var card_response = "slot values: "
                 var slots = intent_json[intent].slots
                 for (var key in slots) {
-                    card_response = card_response + " slot: "+ key + " value: "+ request.slot(key)
+                    card_response = card_response + "; " + key + " : "+ request.slot(key)
 				}
-				response.card('Slot values', card_response)
+				response.card(intent, card_response)
             })
         })
         callback(app)
